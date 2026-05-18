@@ -38,3 +38,11 @@ Masz dwie możliwości:
 
 🔹 4. Uruchom serwer
 `python manage.py runserver`
+
+
+## Bezpieczeństwo
+
+- Nie uruchamiaj aplikacji w trybie debug w środowisku produkcyjnym.
+- Nie przechowuj sekretów (np. kluczy i haseł) bezpośrednio w kodzie repozytorium; używaj zmiennych środowiskowych.
+- Jeśli uruchamiasz aplikację publicznie, ogranicz dostęp do hosta i portów tylko do zaufanych użytkowników lub sieci.
+- Regularnie aktualizuj zależności z plików `requirements.txt` oraz obrazy Dockera, jeśli są używane.
