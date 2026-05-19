@@ -36,6 +36,9 @@ jobs:
   build-and-push:
      needs: test
      runs-on: ubuntu-latest
+     permissions:
+       security-events: write   
+       contents: read
      steps:
      - name: Checkout code
        uses: actions/checkout@v3
@@ -73,7 +76,7 @@ jobs:
          format: 'sarif'
          output: 'trivy-results.sarif'
          exit-code: '0'
-         vignore-unfixed: true
+         ignore-unfixed: true
          severity: 'CRITICAL,HIGH,MEDIUM'
       
      - name: Upload Trivy scan results to GitHub Security tab
