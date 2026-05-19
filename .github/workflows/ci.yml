@@ -189,7 +189,7 @@ jobs:
           docker tag ${{ secrets.DOCKER_USERNAME }}/the-button:${SHORT_SHA} ${{ secrets.DOCKER_USERNAME }}/the-button:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/the-button:latest
           
-          echo "Obraz Docker został otagowany wersją ${{ steps.versioning.outputs.new_tag }} i wypchnięty do
+          echo "Obraz Docker został otagowany wersją ${{ steps.versioning.outputs.new_tag }} i wypchnięty do rejestru"
 
   deploy-to-production:
     needs: release
